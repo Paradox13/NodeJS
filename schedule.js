@@ -12,6 +12,8 @@ rule2.dayOfWeek = [process.env.day];
 rule2.hour = process.env.hour;
 rule2.minute = process.env.minute;
 
+console.log('on ' + rule2.dayOfWeek + ' at ' + rule2.hour + ':' + rule2.minute);
+
 var transporter = nodemailer.createTransport({
     service: 'Yandex',
     auth: {
