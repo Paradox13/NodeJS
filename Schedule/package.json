@@ -1,0 +1,10 @@
+{
+	"dependencies": {
+		"websocket":"",
+		"socket.io": ""
+	},
+	"scripts": {
+		"start": "node schedule.js"
+	},
+	"main": "schedule.js"
+}
