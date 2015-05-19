@@ -9,7 +9,7 @@ console.log('server started??');
 var rule2 = new cron.RecurrenceRule();
 rule2.dayOfWeek = [2];
 rule2.hour = 23;
-rule2.minute = 30;
+rule2.minute = 36;
 cron.scheduleJob(rule2, function(){
     http.request({host:'doubledox.ru', path:'/Other/Some.aspx?test=test'}).end();
 	console.log('request sent');
