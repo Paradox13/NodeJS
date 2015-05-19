@@ -4,7 +4,7 @@ var nodemailer = require('nodemailer');
 
 var server = http.createServer();
 server.listen(process.env.PORT);
-console.log('server started??');
+console.log('server started');
 
 /* This runs at 3:10AM every Friday, Saturday and Sunday. */
 var rule2 = new cron.RecurrenceRule();
@@ -23,7 +23,8 @@ var transporter = nodemailer.createTransport({
 });
 
 cron.scheduleJob(rule2, function(){
-    http.request({host:'doubledox.ru', path:'/Other/Some.aspx?test=test'}).end();
+    console.log('hit');
+	http.request({host:'doubledox.ru', path:'/Other/Some.aspx?test=test'}).end();
 	console.log('request sent');
 	
 	var mailOptions = {
