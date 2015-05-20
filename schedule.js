@@ -28,7 +28,7 @@ cron.scheduleJob(rule2, function(){
 	console.log('request sent');
 	
 	var mailOptions = {
-		from: 'DoubleeDox', // sender address
+		from: process.env.user, // sender address
 		to: 'parax_85@mail.ru', // list of receivers
 		subject: 'Hello', // Subject line
 		text: 'Hello world', // plaintext body
